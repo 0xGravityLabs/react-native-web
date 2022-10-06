@@ -2,7 +2,7 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
-  "name": "@aaronyee/react-native-web",
+  "name": "@gravitylabs/react-native-web",
   "version": "0.18.9",
   "description": "React Native for Web with className support",
   "module": "dist/index.js",
@@ -38,7 +38,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/aaronyee-eth/react-native-web-classname"
+    "url": "https://github.com/0xGravityLabs/react-native-web"
   },
   "tags": [
     "react"
