@@ -28,6 +28,7 @@ type Props = $ReadOnly<{|
   activeOpacity?: ?number,
   onHideUnderlay?: ?() => void,
   onShowUnderlay?: ?() => void,
+  className?: ?string,
   style?: ViewStyle,
   testOnly_pressed?: ?boolean,
   underlayColor?: ?ColorValue

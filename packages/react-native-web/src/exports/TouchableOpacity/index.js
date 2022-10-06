@@ -25,6 +25,7 @@ type ViewStyle = $PropertyType<ViewProps, 'style'>;
 type Props = $ReadOnly<{|
   ...TouchableWithoutFeedbackProps,
   activeOpacity?: ?number,
+  className?: ?string,
   style?: ?ViewStyle
 |}>;
 

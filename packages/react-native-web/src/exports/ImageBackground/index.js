@@ -19,6 +19,7 @@ import View from '../View';
 type ImageBackgroundProps = {
   ...ImageProps,
   imageRef?: any,
+  imageClassName?: ?string,
   imageStyle?: $PropertyType<ImageProps, 'style'>,
   style?: $PropertyType<ViewProps, 'style'>
 };
@@ -34,7 +35,9 @@ const ImageBackground: React.AbstractComponent<
 > = forwardRef((props, forwardedRef) => {
   const {
     children,
+    className,
     style = emptyObject,
+    imageClassName,
     imageStyle,
     imageRef,
     ...rest
@@ -42,9 +45,10 @@ const ImageBackground: React.AbstractComponent<
   const { height, width } = StyleSheet.flatten(style);
 
   return (
-    <View ref={forwardedRef} style={style}>
+    <View className={className} ref={forwardedRef} style={style}>
       <Image
         {...rest}
+        className={imageClassName}
         ref={imageRef}
         style={[
           {

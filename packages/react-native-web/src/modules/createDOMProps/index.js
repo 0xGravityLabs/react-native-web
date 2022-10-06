@@ -98,6 +98,7 @@ const createDOMProps = (elementType, props, options) => {
     focusable,
     nativeID,
     pointerEvents,
+    className: _className,
     style,
     testID,
     // Rest
@@ -334,6 +335,11 @@ const createDOMProps = (elementType, props, options) => {
   );
   if (className) {
     domProps.className = className;
+  }
+  if (_className) {
+    domProps.className = domProps.className
+      ? domProps.className + ' ' + _className
+      : _className;
   }
   if (inlineStyle) {
     domProps.style = inlineStyle;
