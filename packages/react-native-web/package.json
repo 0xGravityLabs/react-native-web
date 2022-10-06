@@ -2,7 +2,7 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
-  "name": "react-native-web-classname",
+  "name": "@aaronyee/react-native-web",
   "version": "0.18.9",
   "description": "React Native for Web with className support",
   "module": "dist/index.js",
