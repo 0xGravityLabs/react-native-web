@@ -4,6 +4,8 @@
 
 "React Native for Web" makes it possible to run [React Native][react-native-url] components and APIs on the web using React DOM.
 
+**Modified: `react-native-web-classname` adds the `className` prop support for all components to the original package `react-native-web`.**
+
 ## Documentation
 
 The [documentation site](https://necolas.github.io/react-native-web/) ([source](https://github.com/necolas/react-native-web/blob/master/packages/react-native-web-docs)) covers installation, guides, and APIs.
