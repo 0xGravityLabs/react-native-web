@@ -18,7 +18,7 @@ import { useRef } from 'react';
 let didWarn = false;
 const emptyObject = {};
 
-function setNativeProps(
+function setNativeProps (
   node,
   nativeProps,
   pointerEvents,
@@ -38,6 +38,9 @@ function setNativeProps(
       ...nativeProps,
       style: [style, nativeProps.style]
     });
+
+    // remove abundant generated className
+    if (nativeProps.className == null) delete domProps['className'];
 
     const nextDomStyle = domProps.style;
 
@@ -62,7 +65,7 @@ function setNativeProps(
  * Adds non-standard methods to the hode element. This is temporarily until an
  * API like `ReactNative.measure(hostRef, callback)` is added to React Native.
  */
-export default function usePlatformMethods({
+export default function usePlatformMethods ({
   pointerEvents,
   style
 }: {
@@ -84,7 +87,7 @@ export default function usePlatformMethods({
         UIManager.measureInWindow(hostNode, callback);
       hostNode.setNativeProps = (nativeProps) => {
         const { style, pointerEvents } =
-          setNativePropsArgsRef.current || emptyObject;
+        setNativePropsArgsRef.current || emptyObject;
         setNativeProps(
           hostNode,
           nativeProps,
